@@ -46,6 +46,8 @@ share/python-wheels/
 MANIFEST
 secrets.json
 my_settings.py
+lanege.csv
+.~lock.product.csv#
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -71,6 +73,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 pytestdebug.log
+product1.csv
+models.py
 
 # Translations
 *.mo
