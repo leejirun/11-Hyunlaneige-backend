@@ -96,6 +96,7 @@ WSGI_APPLICATION = 'hyunlaneige.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = my_settings.DATABASES
+REST_API  = my_settings.REST_API #나중에 쓸 카카오로그인 REST_API 키
 
 
 # Password validation
