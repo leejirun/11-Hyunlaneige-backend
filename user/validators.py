@@ -9,4 +9,3 @@ def password_validation_function(value):
 def phone_number_validation_function(value):
     regex_phone_number = re.compile('^\+?1?\d{9,15}$')
     return regex_phone_number.search(value)
-

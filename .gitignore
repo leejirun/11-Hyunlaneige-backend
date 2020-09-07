@@ -75,6 +75,7 @@ coverage.xml
 pytestdebug.log
 product1.csv
 models.py
+scripts
 
 # Translations
 *.mo
