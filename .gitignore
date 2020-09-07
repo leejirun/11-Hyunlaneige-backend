@@ -73,8 +73,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 pytestdebug.log
-product1.csv
-models.py
 scripts
 
 # Translations

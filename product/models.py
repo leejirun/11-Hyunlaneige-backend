@@ -31,7 +31,7 @@ class TypeCategoryProduct(models.Model):
 class Product(models.Model):
     korean_name    = models.CharField(max_length = 64)
     english_name   = models.CharField(max_length = 64)
-    price          = models.DecimalField(max_digits = 10, decimal_places = 0)
+    price          = models.DecimalField(max_digits = 10, decimal_places = 2)
     type_category  = models.ManyToManyField(TypeCategory, through = TypeCategoryProduct)
     class Meta:
         db_table = "products"
