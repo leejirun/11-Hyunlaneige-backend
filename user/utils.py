@@ -23,7 +23,7 @@ def login_required(func):
             request.user = user
 
         except jwt.exceptions.DecodeError:
-            return JsonResponse({'message' : 'INVALID TOKEN'}, status = 401)
+            return JsonResponse({'message' : 'INVALID_TOKEN'}, status = 401)
 
         except User.DoesNotExist:
             return JsonResponse({'message' : 'THIS ACCOUNT DOES NOT EXIST'}, status = 401)

@@ -48,6 +48,7 @@ secrets.json
 my_settings.py
 lanege.csv
 .~lock.product.csv#
+Dockerfile
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
