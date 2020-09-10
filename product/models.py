@@ -2,7 +2,6 @@ from django.db          import models
 
 from user.models        import User
 
-#메인 카테고리테이블
 class MainCategory(models.Model):
     name         = models.CharField(max_length = 32)
     class Meta:
@@ -21,22 +20,20 @@ class TypeCategory(models.Model):
     sub_category  = models.ForeignKey('SubCategory', on_delete = models.CASCADE)
     class Meta:
         db_table = "type_categories"
-        
-#종류 카테고리별 상품(중간테이블)
+
 class TypeCategoryProduct(models.Model):
     type_category = models.ForeignKey('TypeCategory', on_delete = models.CASCADE)
     product       = models.ForeignKey('Product', on_delete = models.CASCADE)  
-    
-#상품 테이블
+
 class Product(models.Model):
     korean_name    = models.CharField(max_length = 64)
     english_name   = models.CharField(max_length = 64)
     price          = models.DecimalField(max_digits = 10, decimal_places = 2)
     type_category  = models.ManyToManyField(TypeCategory, through = TypeCategoryProduct)
+
     class Meta:
         db_table = "products"
-        
-#이미지 테이블
+
 class Image(models.Model):
     image_url  = models.URLField(max_length = 2048, null = True)
     product    = models.ForeignKey(Product, on_delete = models.CASCADE)
@@ -47,6 +44,7 @@ class Image(models.Model):
 class HtmlTag(models.Model):
     detail     = models.TextField()
     product    = models.ForeignKey(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "html_tags"     
            
@@ -61,6 +59,7 @@ class Description(models.Model):
 class Precaution(models.Model):
     precaution = models.TextField()
     product    = models.ForeignKey(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "precautions"
         
@@ -68,6 +67,7 @@ class Precaution(models.Model):
 class Size(models.Model):
     size    = models.CharField(max_length = 128)
     product = models.ForeignKey(Product, on_delete = models.CASCADE)
+
     class Meta:
         db_table = "sizes"
         
@@ -75,6 +75,7 @@ class Size(models.Model):
 class Ingredient(models.Model):
     ingredient = models.TextField()
     product    = models.OneToOneField(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "ingredients"
         
@@ -82,5 +83,6 @@ class Ingredient(models.Model):
 class Tag(models.Model):
     tag     = models.CharField(max_length = 64)
     product = models.ForeignKey(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "tags"
