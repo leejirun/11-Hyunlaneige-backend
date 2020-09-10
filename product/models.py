@@ -11,6 +11,7 @@ class MainCategory(models.Model):
 class SubCategory(models.Model):
     name          = models.CharField(max_length = 64)
     main_category = models.ForeignKey('MainCategory', on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "sub_categories"
         
@@ -18,6 +19,7 @@ class SubCategory(models.Model):
 class TypeCategory(models.Model):
     name          = models.CharField(max_length = 100)
     sub_category  = models.ForeignKey('SubCategory', on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "type_categories"
 
@@ -37,6 +39,7 @@ class Product(models.Model):
 class Image(models.Model):
     image_url  = models.URLField(max_length = 2048, null = True)
     product    = models.ForeignKey(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "images"
         
@@ -52,6 +55,7 @@ class HtmlTag(models.Model):
 class Description(models.Model):
     description = models.TextField(null = True)
     product     = models.ForeignKey(Product, on_delete = models.CASCADE)
+    
     class Meta:
         db_table = "descriptions"
         
