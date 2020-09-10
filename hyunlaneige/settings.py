@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'user',
     'product',
     'order',
+    'pure_pagination',
 ]
 
 MIDDLEWARE = [
@@ -161,3 +162,4 @@ CORS_ALLOW_HEADERS = (
     'x-csrftoken',
     'x-requested-with',
 )
+
