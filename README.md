@@ -28,7 +28,7 @@
 - Postman : https://www.getpostman.com/collections/4a0b356865500890c6c2
 
 ### <사용한 기술>
- - 백앤드
+- 백앤드
   - Python
   - Django Web Framework
   - CORS headers
@@ -42,7 +42,7 @@
   - Docker
   - Paginator
 
- - 공통
+- 공통
   - JSON
   - Git
   - Linux
