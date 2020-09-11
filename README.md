@@ -40,6 +40,7 @@
   - RESTful API
   - AWS EC2,RDS 연동 및 gunicorn 사용한 배포
   - Docker
+  - Paginator
 
 - 공통
   - JSON
