@@ -23,12 +23,12 @@
   - Back-End Repository
     - https://github.com/wecode-bootcamp-korea/11-Hyunlaneige-backend
 
-#### <사용한 협업 툴>
+### <사용한 협업 툴>
 - Trello : https://trello.com/b/Se5UL3Xj/hyunlaneige
 - Postman : https://www.getpostman.com/collections/4a0b356865500890c6c2
 
-#### <사용한 기술>
-- 백앤드
+### <사용한 기술>
+ - 백앤드
   - Python
   - Django Web Framework
   - CORS headers
@@ -42,7 +42,7 @@
   - Docker
   - Paginator
 
-- 공통
+ - 공통
   - JSON
   - Git
   - Linux
